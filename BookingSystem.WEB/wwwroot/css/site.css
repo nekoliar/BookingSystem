@@ -1,0 +1,21 @@
+/* Custom CSS */
+.sidebar {
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.header {
+    height: 60px;
+    background-color: #343a40;
+    color: white;
+}
+
+.main-content {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.nav-item {
+    padding: 10px;
+    cursor: pointer;
+}

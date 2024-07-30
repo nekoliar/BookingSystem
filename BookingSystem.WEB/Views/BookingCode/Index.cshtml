@@ -1,0 +1,25 @@
+﻿@using BookingSystem.DataModel.Master
+@model IndexBCVM
+
+
+<div class="grid-container">
+    <a class="blue-button create-button" asp-action="Upsert">Insert New Booking Code</a>
+    <table>
+        <tr>
+            <th>Action</th>
+            <th>Booking Code</th>
+            <th>Status</th>
+        </tr>
+        @foreach (var row in Model.Grid)
+        {
+            <tr>
+                <td>
+                    <a class="fa-solid fa-pen" asp-action="Upsert" asp-route-id="@row.Id"></a>
+                    <a class="fa-solid fa-trash" asp-action="Delete" asp-route-id="@row.Id"></a>
+                </td>
+                <td>@row.BookingCode</td>
+                <td>@row.IsActive</td>
+            </tr>
+        }
+    </table>
+</div>
